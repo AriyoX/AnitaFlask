@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ product.name }}</title>
-    <link rel="stylesheet" href="static/product.css">
+
+    <style>
+
+        body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #d01f3c;
+        font-size: 36px;
+    }
+
+    .price {
+        text-align: center;
+        font-size: 24px;
+        color: #666;
+    }
+
+    .description {
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+    }
+
+    .add-to-cart {
+        display: block;
+        margin: 20px auto;
+        background-color: #d01f3c;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+        background-color: #a51c32;
+    }
+
+    </style>
 </head>
 <body>
+
+    {% include 'header.html' %}
+    
     <div class="container">
         <h1>{{ product.name }}</h1>
         <p class="price">${{ product.price }}</p>
@@ -16,5 +72,7 @@
             <button type="submit" class="add-to-cart">Add to Cart</button>
         </form>
     </div>
+
+    {% include 'footer2.html' %}
 </body>
 </html>

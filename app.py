@@ -46,9 +46,14 @@ def view_cart():
 
 @app.route('/checkout', methods=['POST'])
 def checkout():
-    # Process payment and delivery information here
-    cart.clear()  # Clear the cart after successful checkout
-    return "Checkout successful!"
+    total_price = sum(product['price'] for product in cart)
+    return render_template("checkout.html", cart=cart, total_price=total_price)
+
+@app.route('/process_payment', methods=['POST'])
+def process_payment():
+    cart.clear()
+    return render_template("process_payment.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)

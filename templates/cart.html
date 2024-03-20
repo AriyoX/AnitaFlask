@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="static/cart.css">
 </head>
 <body>
+
+    {% include 'header.html' %}
     <div class="container">
         <h1>Cart</h1>
         <ul class="cart-items">
@@ -23,9 +25,11 @@
         <h2 class="total-price">Total Price: ${{ total_price }}</h2>
         
         <form action="/checkout" method="post">
-            <!-- Payment and delivery information fields go here -->
+            
             <button type="submit" class="checkout-button">Checkout</button>
         </form>
     </div>
+
+    {% include 'footer2.html' %}
 </body>
 </html>

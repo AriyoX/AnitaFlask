@@ -6,10 +6,23 @@
     <link rel="stylesheet" href="static/home.css">
 </head>
 <body>
-    <h1>GLOW CANVAS</h1>
-    <p>Description of your business...</p>
+
+    {% include 'header.html' %}
     
-    <h2>Products</h2>
+    <h1>GLOW CANVAS</h1>
+    <p>Glow canvas is beauty enterprise that offers makeup services for all ages and occasions from photoshoots to birthdays you name it we will give it a glow.
+
+        Vision: To be east Africa's leading makeup artist brand in expressing boldness and beauty
+        
+        Mission: To offer high quality makeup services to our esteemed customer offering a fun loving and refreshing experience</p>
+
+    <br>
+
+    <p>
+        Glow canvas is founded and managed by Balungi Anita. A makeup artist who started the business on 3 November 2023 as a creative outlet and share the art of sharing individuality and creativity through the power of makeup
+    </p>
+    
+    <h2>Servies Offered</h2>
     <ul>
         {% for product in products %}
             <li>
@@ -25,5 +38,7 @@
     </ul>
 
     <a href="/view_cart"><button>View Cart</button></a>
+
+    {% include 'footer.html' %}
 </body>
 </html>

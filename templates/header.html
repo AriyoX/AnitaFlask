@@ -1,0 +1,20 @@
+<!-- header.html -->
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+</head>
+
+<header>
+    <div class="header-content">
+        <div class="header-left">
+            <h1><a href="/" class="header-link">
+                <h1>Glow Canvas</h1>
+            </a></h1>
+        </div>
+        <div class="header-right">
+            <a href="/view_cart">
+                <img src="{{ url_for('static', filename='images/cart_icon.png') }}" alt="Cart Icon" width="30">
+                Cart ({{ cart_count }})
+            </a>
+        </div>
+    </div>
+</header>

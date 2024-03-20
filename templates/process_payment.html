@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Process Payment</title>
+    <link rel="stylesheet" href="static/process_payment.css">
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+    <div class="container">
+        <div id="payment-successful">
+            <h2>Payment Successful</h2>
+            <button onclick="continueShopping()">Continue Shopping</button>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+    <script>
+        function continueShopping() {
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>
