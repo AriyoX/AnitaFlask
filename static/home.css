@@ -14,7 +14,7 @@ body {
 h1 {
     text-align: center;
     color: #d01f3c;
-    font-size: 36px;
+    font-size: 60px;
     margin-bottom: 20px;
 }
 
@@ -49,6 +49,12 @@ li {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: solid;
+    font-weight: bold;
 }
 
 img {
@@ -77,8 +83,24 @@ a {
     text-decoration: none;
     color: #d01f3c;
     transition: color 0.3s ease;
+    padding-top: 5px;
 }
 
 a:hover {
     color: #a51c32;
+}
+
+.image-container {
+    height: 200px;
+    width: 200px;
+}
+
+.content-box1 {
+    width: 65%;
+    margin: auto;
+}
+
+.content-box2 {
+    width: 65%;
+    margin: auto;
 }

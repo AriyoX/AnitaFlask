@@ -47,3 +47,8 @@ h1 {
 .add-to-cart:hover {
     background-color: #a51c32;
 }
+
+.description {
+    width: 70px;
+    margin: auto;
+}

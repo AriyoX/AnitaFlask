@@ -64,8 +64,8 @@
     
     <div class="container">
         <h1>{{ product.name }}</h1>
-        <p class="price">${{ product.price }}</p>
-        <p class="description">Description of the product...</p>
+        <p class="price">UGX {{ product.price }}</p>
+        <p class="description">{{ product.description }}</p>
         
         <form action="/add_to_cart" method="post">
             <input type="hidden" name="product_id" value="{{ product.id }}">

@@ -10,23 +10,27 @@
     {% include 'header.html' %}
     
     <h1>GLOW CANVAS</h1>
-    <p>Glow canvas is beauty enterprise that offers makeup services for all ages and occasions from photoshoots to birthdays you name it we will give it a glow.
+    <p class = "content-box1">Glow canvas is a beauty enterprise that offers makeup services for all ages and occasions from photoshoots to birthdays you name it we will give it a glow.
 
-        Vision: To be east Africa's leading makeup artist brand in expressing boldness and beauty
+        <br>
+
+        Vision: To be east Africa's leading makeup artist brand in expressing boldness and beauty.
         
-        Mission: To offer high quality makeup services to our esteemed customer offering a fun loving and refreshing experience</p>
+        <br>
+
+        Mission: To offer high quality makeup services to our esteemed customer offering a fun loving and refreshing experience.</p>
 
     <br>
 
-    <p>
-        Glow canvas is founded and managed by Balungi Anita. A makeup artist who started the business on 3 November 2023 as a creative outlet and share the art of sharing individuality and creativity through the power of makeup
+    <p class = "content-box2">
+        Glow canvas is founded and managed by Balungi Anita. A makeup artist who started the business on 3 November 2023 as a creative outlet and share the art of sharing individuality and creativity through the power of makeup.
     </p>
     
-    <h2>Servies Offered</h2>
+    <h2>Services Offered</h2>
     <ul>
         {% for product in products %}
             <li>
-                <img src="{{ url_for('static', filename=product.image_path) }}" alt="{{ product.name }}" width="100">
+                <img src="{{ url_for('static', filename=product.image_path) }}" alt="{{ product.name }}" class = "image-container">
                 {{ product.name }} - UGX {{ product.price }}
                 <form action="/add_to_cart" method="post">
                     <input type="hidden" name="product_id" value="{{ product.id }}">
