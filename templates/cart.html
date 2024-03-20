@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Cart</title>
-    <link rel="stylesheet" href="static/main.css">
+    <link rel="stylesheet" href="static/cart.css">
 </head>
 <body>
-    <h1>Cart</h1>
-    <ul>
-        {% for product in cart %}
-            <li>
-                {{ product.name }} - ${{ product.price }}
-                <form action="/remove_from_cart" method="post">
-                    <input type="hidden" name="product_id" value="{{ product.id }}">
-                    <button type="submit">Remove</button>
-                </form>
-            </li>
-        {% endfor %}
-    </ul>
-    
-    <h2>Total Price: ${{ total_price }}</h2>
-    
-    <form action="/checkout" method="post">
-        <!-- Payment and delivery information fields go here -->
-        <button type="submit">Checkout</button>
-    </form>
+    <div class="container">
+        <h1>Cart</h1>
+        <ul class="cart-items">
+            {% for product in cart %}
+                <li class="cart-item">
+                    <span class="product-name">{{ product.name }}</span> - <span class="product-price">${{ product.price }}</span>
+                    <form action="/remove_from_cart" method="post">
+                        <input type="hidden" name="product_id" value="{{ product.id }}">
+                        <button type="submit" class="remove-button">Remove</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        
+        <h2 class="total-price">Total Price: ${{ total_price }}</h2>
+        
+        <form action="/checkout" method="post">
+            <!-- Payment and delivery information fields go here -->
+            <button type="submit" class="checkout-button">Checkout</button>
+        </form>
+    </div>
 </body>
 </html>

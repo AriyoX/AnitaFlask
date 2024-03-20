@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" href="static/main.css">
+    <link rel="stylesheet" href="static/home.css">
 </head>
 <body>
-    <h1>Welcome to Our E-commerce Website</h1>
+    <h1>GLOW CANVAS</h1>
     <p>Description of your business...</p>
     
     <h2>Products</h2>
     <ul>
         {% for product in products %}
             <li>
-                {{ product.name }} - ${{ product.price }}
+                <img src="{{ url_for('static', filename=product.image_path) }}" alt="{{ product.name }}" width="100">
+                {{ product.name }} - UGX {{ product.price }}
                 <form action="/add_to_cart" method="post">
                     <input type="hidden" name="product_id" value="{{ product.id }}">
                     <button type="submit">Add to Cart</button>

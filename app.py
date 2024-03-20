@@ -4,9 +4,9 @@ app = Flask(__name__)
 
 # Sample data for products
 products = [
-    {"id": 1, "name": "Simple Glam", "price": 30000},
-    {"id": 2, "name": "Full Face Beat", "price": 50000},
-    {"id": 3, "name": "Eye Glam", "price": 10000}
+    {"id": 1, "name": "Simple Glam", "price": 30000, "image_path": "images/simple_glam.jpg"},
+    {"id": 2, "name": "Full Face Beat", "price": 50000, "image_path": "images/full_face_beat.jpg"},
+    {"id": 3, "name": "Eye Glam", "price": 10000, "image_path": "images/eye_glam.jpg"}
 ]
 
 # Cart to store selected products
