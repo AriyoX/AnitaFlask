@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="static/main.css">
+</head>
+<body>
+    <h1>Cart</h1>
+    <ul>
+        {% for product in cart %}
+            <li>
+                {{ product.name }} - ${{ product.price }}
+                <form action="/remove_from_cart" method="post">
+                    <input type="hidden" name="product_id" value="{{ product.id }}">
+                    <button type="submit">Remove</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Total Price: ${{ total_price }}</h2>
+    
+    <form action="/checkout" method="post">
+        <!-- Payment and delivery information fields go here -->
+        <button type="submit">Checkout</button>
+    </form>
+</body>
+</html>
