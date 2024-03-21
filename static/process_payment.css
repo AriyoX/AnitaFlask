@@ -1,5 +1,5 @@
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Trajan Pro', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -15,14 +15,14 @@ body {
 }
 
 h2 {
-    color: #d01f3c;
+    color: #56454D;
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
 }
 
 button {
-    background-color: #d01f3c;
+    background-color: #56454D;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -32,5 +32,5 @@ button {
 }
 
 button:hover {
-    background-color: #a51c32;
+    background-color: #56495A;
 }

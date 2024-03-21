@@ -1,5 +1,5 @@
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Trajan Pro', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -13,7 +13,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #d01f3c;
+    color: #56454D;
     font-size: 60px;
     margin-bottom: 20px;
 }
@@ -25,7 +25,7 @@ p {
 
 h2 {
     text-align: center;
-    color: #d01f3c;
+    color: #56454D;
     font-size: 24px;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -65,7 +65,7 @@ img {
 }
 
 button {
-    background-color: #d01f3c;
+    background-color: #56454D;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -76,18 +76,18 @@ button {
 }
 
 button:hover {
-    background-color: #a51c32;
+    background-color: #56495A;
 }
 
 a {
     text-decoration: none;
-    color: #d01f3c;
+    color: #56454D;
     transition: color 0.3s ease;
     padding-top: 5px;
 }
 
 a:hover {
-    color: #a51c32;
+    color: #56495A;
 }
 
 .image-container {

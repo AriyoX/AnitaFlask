@@ -19,9 +19,10 @@ def home():
 
 @app.route('/product/<int:id>')
 def product(id):
+    cart_count = len(cart)
     product = next((p for p in products if p['id'] == id), None)
     if product:
-        return render_template('product.html', product=product)
+        return render_template('product.html', product=product, cart_count=cart_count)
     return "Product not found"
 
 @app.route('/add_to_cart', methods=['POST'])
@@ -42,16 +43,18 @@ def remove_from_cart():
 
 @app.route('/view_cart')
 def view_cart():
+    cart_count = len(cart)
     total_price = sum(product['price'] for product in cart)
-    return render_template('cart.html', cart=cart, total_price=total_price)
+    return render_template('cart.html', cart=cart, total_price=total_price, cart_count=cart_count)
 
 @app.route('/checkout', methods=['POST'])
 def checkout():
+    cart_count = len(cart)
     if len(cart) == 0:  # Check if the cart is empty
         return redirect(url_for('home'))  # Redirect to home if cart is empty
     else:
         total_price = sum(product['price'] for product in cart)
-        return render_template("checkout.html", cart=cart, total_price=total_price)
+        return render_template("checkout.html", cart=cart, total_price=total_price, cart_count=cart_count)
 
 @app.route('/process_payment', methods=['POST'])
 def process_payment():
